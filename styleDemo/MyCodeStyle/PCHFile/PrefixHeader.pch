@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  MyCodeStyle
+//
+//  Created by mrc on 2017/2/24.
+//  Copyright © 2017年 mrc. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Foundation/Foundation.h>
+#import "UIImage+ScaleImage.h"
+#import "ProtocolStack.h"
+#import "CCRegularExpression.h"
+#import "UIImageView+WebCache.h"
+#endif /* PrefixHeader_pch */
+//屏幕尺寸
+#define kScreenSize [UIScreen mainScreen].bounds.size
+#define kScreenWidth  kScreenSize.width
+#define kScreenHeight  kScreenSize.size.height
+
+/**
+ *  点击的某个索引
+ *
+ *  @param NSInteger 索引所在位置
+ */
+typedef void(^TAP_ACTION)(NSInteger );
+
+#undef	RGB
+#define RGB(R,G,B)		[UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:1.0f]
+
+#undef	RGBA
+#define RGBA(R,G,B,A)	[UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:A]
